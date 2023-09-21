@@ -9,7 +9,7 @@ const io = socketIO(server);
 app.use(express.static(__dirname + '/public'));
 
 io.on('connection', (socket) => {
-    console.log('Un cliente se ha conectado');
+    console.log('Un cliente se ha conectado :))');
 
     socket.on('enviar-elemento', (elemento) => {
         io.emit('elemento-recibido', elemento);
@@ -20,7 +20,7 @@ io.on('connection', (socket) => {
     })
 
     socket.on('disconnect', () => {
-        console.log('Un cliente se ha desconectado');
+        console.log('Un cliente se ha desconectado :((');
     })
 })
 
